@@ -1,0 +1,37 @@
+#menu-items:hover > .menu-item {
+    opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover {
+    opacity: 1;
+}
+
+#menu-background-image {
+    background-size: 110vmax;
+    opacity: 0.40;
+
+    transition: opacity 800ms ease,
+        background-size 800ms ease,
+        background-position 800ms ease;
+}
+
+#menu[data-active-index="0"] > #menu-background-image {
+    background-position: center 45%;
+}
+
+#menu[data-active-index="1"] > #menu-background-image {
+    background-position: center 50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-image {
+    background-position: center 55%;
+}
+
+#menu[data-active-index="3"] > #menu-background-image {
+    background-position: center 60%;
+}
+
+#menu-items:hover ~ #menu-background-image {
+    background-size: 100vmax;
+    opacity: 0.20;
+}
