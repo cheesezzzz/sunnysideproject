@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,9 +18,10 @@
     />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link href="./dist/output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
   </head>
-  <body>
+  <body id="body">
     <!-- Navigation Bar -->
     <header>
       <section
@@ -62,7 +63,7 @@
           </div>
 
           <!-- !hamburger button here -->
-          <div class="md:hidden">
+          <div class="md:hidden z-50">
             <a href="#" class="hamburger-button">
               <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -75,7 +76,7 @@
           </div>
         </nav>
 
-        <!-- Marketing Message -->
+        <!-- ! Marketing Message -->
         <div>
           <h1
             class="text-center mt-24 font-fraunces text-5xl mx-16 tracking-[.25em] leading-normal text-white"
@@ -101,16 +102,15 @@
           </svg>
         </div>
 
-        <!-- navigation menu page -->
-        <!--TODO-->
+        <!--! navigation menu page -->
         <div
           id="menu"
-          class="h-screen flex items-center bg-black absolute top-0 w-full transform duration-500 ease-linear -translate-y-full md:hidden"
+          class="h-screen flex items-center bg-black fixed top-0 w-full opacity-0 invisible duration-300 ease-out transition-opacity md:hidden "
         >
           <div id="menu-items" class="lg:ml-64 ml-32 space-y-10 z-10">
             <a
               href="#"
-              class="menu-item text-white font-barlow lg:text-9xl md:text-7xl text-6xl block transition-opacity duration-400 ease-linear"
+              class="menu-item text-white font-barlow lg:text-9xl md:text-7xl text-6xl block transition-transform duration-400 ease-linear"
               >About</a
             >
             <a
@@ -129,22 +129,6 @@
               >Contact</a
             >
           </div>
-
-          <!-- ! hamburger button here -->
-          <a href="#" class="btn">
-            <svg
-              class="absolute right-6 top-12 z-50"
-              width="64"
-              height="36"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z"
-                fill="#ffffff"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </a>
 
           <div
             id="menu-background-image"
@@ -409,22 +393,5 @@
       </div>
     </footer>
 
-    <script>
-          const showMenu = document.querySelector('#menu')
-          const menuBtn = document.querySelector('.hamburger-button')
-          const menuOpenedBtn = document.querySelector('.btn')
-
-          menuBtn.addEventListener('click', function() {
-            showMenu.classList.toggle('-translate-y-full')
-          })
-
-          menuOpenedBtn.addEventListener('click', () => {
-            showMenu.classList.toggle('-translate-y-full')
-          })
-
-          
-
-
-    </script>
   </body>
 </html>

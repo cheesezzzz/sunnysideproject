@@ -7,6 +7,29 @@ module.exports = {
         'fraunces': ['Fraunces', 'serif']
     },
     extend: {
+      keyframes: {
+        'fade-in': {
+            '0%': {
+                opacity: '0',
+            },
+            '100%': {
+                opacity: '1',
+            },
+        },
+        'fade-out': {
+          '100%': {
+              opacity: '1',
+          },
+          '0%': {
+              opacity: '0',
+          },
+      }
+      },
+      animation: {
+          'fade-in': 'fade-in 1s ease-out',
+          'fade-out': 'fade-out 5s ease-out'
+      },
+
       backgroundImage: {
         'orange-header': "url('images/desktop/image-header.jpg')",
         'cherry': "url(/images/mobile/image-graphic-design.jpg)",
